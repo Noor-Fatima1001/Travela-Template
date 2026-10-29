@@ -1,0 +1,52 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-md {
+    @apply bg-primary border border-primary text-white text-small 
+           px-btn-md-x py-btn-md-y rounded-pill font-semibold 
+           hover:text-primary hover:bg-white 
+           transition-all duration-300 transform hover:scale-105 shadow-md;
+  }
+
+  .btn-lg {
+    @apply bg-primary border border-primary text-white text-small
+           px-btn-lg-x py-btn-lg-y rounded-pill font-semibold 
+           hover:text-primary hover:bg-white  transition-all duration-300 transform hover:scale-105 shadow-md
+           ;
+  }
+  .heading-lg{
+  @apply  text-large font-semibold mb-space-md text-black
+  }
+  .heading-md{
+  @apply  text-regular font-semibold mb-space-md text-primary uppercase
+  }
+  .heading-sm{
+    @apply  text-regular font-semibold mb-space-md text-black 
+  
+  }
+  .paragraph{
+    @apply text-small font-regular text-gray-500 
+  }
+  
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@layer utilities {
+  .animate-slideDown {
+    animation: slideDown 0.4s ease forwards;
+  }
+}
+.clip-triangle-tl {
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.clip-triangle-br {
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
